@@ -1,0 +1,39 @@
+@import "./color.scss";
+
+.header{
+    height: 4rem;
+    width: 100%;
+    background-color: $background;
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    article{
+        display: flex;
+        justify-content: space-around;
+        width: 50vw;
+
+        a{
+            margin: auto 0;
+            font-size: large;
+        }
+
+        a:hover{
+            color:$hover-color;
+        }
+    }
+
+}
+
+h1{
+    color: $font-color;
+}
+
+a{
+    color: $font-color;
+    text-decoration: none;
+}
