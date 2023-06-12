@@ -17,7 +17,6 @@ const addProject = asyncError(async(req, res)=>{
     if(!user) return errorHandler(res, 400, "Login First.");
     
     cloudinaryConnect();
-    await cloudinary.v2.uploader.destroy(user.projects.image.public_id);
     const myCloud = await cloudinary.v2.uploader.upload(image, {
         folder:"Portfolio"
     });

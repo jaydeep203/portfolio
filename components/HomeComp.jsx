@@ -88,7 +88,7 @@ export const TitleName = () => {
               variant="body2"
               color="text.secondary"
             >
-              {item.data?item.date.toString().split("T")[0]:"date"}
+              {item.date?item.date.toString().split("T")[0]:"date"}
             </TimelineOppositeContent>
 
             <TimelineSeparator>
