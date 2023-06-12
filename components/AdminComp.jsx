@@ -10,6 +10,7 @@ import { MdKeyboardBackspace } from "react-icons/md";
 import { ProjectCard } from './ProjectComp';
 import { redirect } from 'next/navigation';
 import { toast } from 'react-hot-toast';
+import {useRouter} from "next/navigation";
 
 
 export const AdminProject = () => {
@@ -22,7 +23,7 @@ export const AdminProject = () => {
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
   const [techStack, setTechStack] = useState('');
-
+  const router = useRouter();
   // const user = {projects:[1,2,3]};
 
   const submitHandler = async(e) => {
@@ -41,6 +42,7 @@ export const AdminProject = () => {
       const data = await res.json();
       if(!data.success) return toast.error(data.message);
       toast.success(data.message);
+      router.refresh();
 
     }catch(error){
       return toast.error(error);
@@ -152,7 +154,7 @@ export const AdminTimeline = () => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
-
+  const router = useRouter();
   // const user = {timeline:[1,2,3]};
 
   const submitHandler = async(e) => {
@@ -173,6 +175,8 @@ export const AdminTimeline = () => {
       const data = await res.json();
       if(!data.success) return toast.error(data.message);
       toast.success(data.message);
+      router.refresh();
+
 
     }catch(error){
       return toast.error(error);
@@ -286,6 +290,8 @@ const AdminComp = () => {
 
     const submitHandler = async(e) => {
       e.preventDefault();
+
+      const router = useRouter();
       
       try {
         const res = await fetch("/api/admin/update", {
@@ -300,6 +306,7 @@ const AdminComp = () => {
         const data = await res.json();
         if(!data.success) return toast.error(data.message);
         toast.success(data.message);
+        router.refresh();
         
       } catch (error) {
         return toast.error(error);
