@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { Typography, Button } from '@mui/material';
+import { toast } from 'react-hot-toast';
 
 const ContactComp = () => {
 
@@ -8,9 +9,28 @@ const ContactComp = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
-    const contactFormHandler = (e) => {
+    const contactFormHandler = async(e) => {
         e.preventDefault();
-        console.log("Form Submitted Successfully.");
+        try{
+
+          const res = await fetch("/api/auth/contact", {
+            method:"POST",
+            headers:{
+              "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+              name, email, message
+            })
+          });
+
+          const data = await res.json();
+          if(!data.success) return toast.error(data.message);
+          toast.success(data.message);
+
+        }catch(error){
+          return toast.error(error);
+        }
+        
     }
 
 

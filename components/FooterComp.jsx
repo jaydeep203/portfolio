@@ -3,6 +3,7 @@
 import React from 'react';
 import { Typography } from "@mui/material";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { AiFillMail } from "react-icons/ai";
 import Link from 'next/link';
 
 
@@ -26,9 +27,12 @@ const FooterComp = () => {
         <Typography variant="h6">Social Media</Typography>
         <a href={"https://github.com/jaydeep203/"} target="blank">
           <BsGithub/>
-          </a>
-        <a href={"https://github.com/jaydeep203/"} target="blank">
+        </a>
+        <a href={"https://www.linkedin.com/in/jaydeep-deshpande-68601822a/"} target="blank">
           <BsLinkedin/>
+        </a>
+        <a href="mailto:jaydeepdeshpande03@outlook.com" target="blank">
+          <AiFillMail/>
         </a>
     </div>
     </>

@@ -23,6 +23,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.2.1",
     "next": "13.4.4",
+    "nodemailer": "^6.9.3",
     "overlay-navbar": "^1.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
