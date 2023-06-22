@@ -11,15 +11,15 @@ const addProject = asyncError(async(req, res)=>{
     if( !title || !url || !image || !description || !techStack)
     return errorHandler(res, 404, "Please Enter all Fields.");
 
-
     await connectDB();
     const user = await checkAuth(req);
     if(!user) return errorHandler(res, 400, "Login First.");
-    
+    console.log("before cloudinary.");
     cloudinaryConnect();
     const myCloud = await cloudinary.v2.uploader.upload(image, {
         folder:"Portfolio"
     });
+    console.log("after cloudinary")
     
     user.projects.unshift({
         url,

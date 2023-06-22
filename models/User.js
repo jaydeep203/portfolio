@@ -46,7 +46,7 @@ const schema = new mongoose.Schema({
           url: String,
         },
       },
-      projects: [
+    projects: [
         {
           url: String,
           title: String,
@@ -57,8 +57,8 @@ const schema = new mongoose.Schema({
           description: String,
           techStack: String,
         },
-      ],
-      about: {
+    ],
+    about: {
         name: String,
         title: String,
         subtitle: String,
@@ -68,7 +68,7 @@ const schema = new mongoose.Schema({
           public_id: String,
           url: String,
         },
-      },
+    },
       
 });
 
