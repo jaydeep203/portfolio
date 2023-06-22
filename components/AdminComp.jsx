@@ -26,7 +26,6 @@ export const AdminProject = () => {
 
   const submitHandler = async(e) => {
     e.preventDefault();
-    console.log(image);
     try{
 
       const res = await fetch("/api/admin/add-projects", {
