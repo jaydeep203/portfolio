@@ -4,6 +4,7 @@ import React from 'react';
 import { Typography } from "@mui/material";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
+import {SiLeetcode} from "react-icons/si";
 import Link from 'next/link';
 
 
@@ -30,6 +31,9 @@ const FooterComp = () => {
         </a>
         <a href={"https://www.linkedin.com/in/jaydeep-deshpande-68601822a/"} target="blank">
           <BsLinkedin/>
+        </a>
+        <a href={"https://www.linkedin.com/in/jaydeep-deshpande-68601822a/"} target="blank">
+          <SiLeetcode/>
         </a>
         <a href="mailto:jaydeepdeshpande03@outlook.com" target="blank">
           <AiFillMail/>

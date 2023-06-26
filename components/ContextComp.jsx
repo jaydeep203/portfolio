@@ -8,7 +8,8 @@ export const ContextProvider = ({children})=>{
     const [user, setUser] = useState({});
 
     useEffect(()=>{
-        fetch("api/user")
+        const url = "api/user?cacheBuster=" + Date.now();
+        fetch(url)
         .then((res)=>res.json())
         .then((data) => {
             if(data.success) setUser(data.user);

@@ -6,7 +6,7 @@ import cloudinary from "cloudinary";
 const updateUser = asyncError(async(req, res)=>{
 
     if(req.method!=="PUT") return errorHandler(res, 400, "Only PUT Method Allowed.");
-    const {name, email, password, skills, about } = req.body;
+    const {name, email, password, self, skills, about } = req.body;
     
     // if(!_id||!name||!email||password||skills||about)
     //     return errorHandler(res, 400, "User Fields are Empty.");
@@ -24,6 +24,9 @@ const updateUser = asyncError(async(req, res)=>{
     }
     if(password){
         user.password = password;
+    }
+    if(self){
+        user.self = self;
     }
     if(about){
         if(about.name){

@@ -279,6 +279,7 @@ const AdminComp = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [self, setSelf] = useState("");
     const [skills, setSkills] = useState({});
     const [about, setAbout] = useState({});
 
@@ -293,7 +294,7 @@ const AdminComp = () => {
             "Content-Type":"application/json"
           },
           body:JSON.stringify({
-            name, email, password, about, skills
+            name, email, password, self, about, skills
           })
         });
         const data = await res.json();
@@ -414,6 +415,13 @@ const AdminComp = () => {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className="adminPanelInputs"
+          />
+          <textarea
+            type="string"
+            placeholder="Self"
+            value={self}
+            onChange={(e) => setSelf(e.target.value)}
             className="adminPanelInputs"
           />
 

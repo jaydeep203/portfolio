@@ -1,0 +1,58 @@
+@import "./color.scss";
+
+.home{
+
+    .homeSelfInfoContainer{
+        background-color: $hover-color;
+        margin-bottom: 4rem;
+        height: 35rem;
+        border-radius: 200px;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        img{
+            border-radius: 60%;
+            margin-left: 7.1rem;
+            border: 1rem solid $background;
+        }
+
+        .SelfText{
+            width: 25rem;
+            color: $font-color;
+            background-color: $background;
+            padding: 5rem;
+            border-radius: 2rem;
+        }
+    }
+      
+}
+
+@media screen and (max-width: 600px){
+
+    .home{
+
+        .homeSelfInfoContainer{
+            flex-direction: column;
+            height: auto;
+            padding: 4rem 3rem 7rem 3rem;
+
+
+            img{
+                width: 20rem;
+                height: 20rem;
+                margin: 0;
+            }
+
+            .SelfText{
+                padding: 2rem;
+                margin-top: 2rem;
+                width: 90%;
+            }
+
+        }
+    }
+
+}

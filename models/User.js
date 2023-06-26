@@ -13,6 +13,7 @@ const schema = new mongoose.Schema({
         required:[true, "Please Enter Password"],
         select:false
     },
+    self:String,
     timeline:[
         {
             title:String,

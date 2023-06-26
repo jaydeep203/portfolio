@@ -14,12 +14,10 @@ const addProject = asyncError(async(req, res)=>{
     await connectDB();
     const user = await checkAuth(req);
     if(!user) return errorHandler(res, 400, "Login First.");
-    console.log("before cloudinary.");
     cloudinaryConnect();
     const myCloud = await cloudinary.v2.uploader.upload(image, {
         folder:"Portfolio"
     });
-    console.log("after cloudinary")
     
     user.projects.unshift({
         url,

@@ -23,9 +23,8 @@ import {
   SiExpress,
   SiCss3,
   SiHtml5,
-  SiThreedotjs,
 } from "react-icons/si";
-
+import {TbBrandNextjs, TbBrandSolidjs} from "react-icons/tb";
 
 
 
@@ -70,6 +69,7 @@ export const TitleName = () => {
 // },[]);
 
   const {user} = useContext(Context);
+
   useEffect(()=>{
     setTimeLines(user.timeline);
   });
@@ -159,7 +159,8 @@ const HomeComp = () => {
           <SiExpress />
           <SiReact />
           <SiNodedotjs />
-          <SiThreedotjs />
+          <TbBrandNextjs />
+          <TbBrandSolidjs />
         </div>
 
       </>

@@ -5,7 +5,7 @@
     width: 100%;
     background-color: $background;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     div{
         justify-content: center;
@@ -36,4 +36,29 @@ h1{
 a{
     color: $font-color;
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px){
+    .header{
+        
+        div{
+
+        display: flex;
+        align-items: center;
+
+        h1{
+            font-size: 1.2rem !important;
+        }
+    }
+
+    article{
+
+        a{
+            font-size: 0.6rem;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }
+}
+    
 }
