@@ -41,13 +41,10 @@ const Page = () => {
       <div className="homeSelfInfoContainer">
         <Image src="/background.png" alt="background" height={500} width={500} />
         <SelfContainer />
+      </div>  
+      <div className="homeContainer">
+        <TimelineTitle />
       </div>
-
-      
-        <div className="homeContainer">
-          <TimelineTitle />
-        </div>
-      
       <div className="homeSkills">
         <HomeComp />
       </div>

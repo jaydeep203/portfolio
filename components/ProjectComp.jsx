@@ -60,8 +60,8 @@ const ProjectComp = () => {
   if(!user) return redirect("/");
   const projects = user.projects;
   if(!projects) return redirect("/");
-  const [isAdmin, setAdmin] = useState(false);
-  if(user._id)  setAdmin(true);
+  // const [isAdmin, setAdmin] = useState(false);
+  // if(user._id)  setAdmin(true);
 
   return (
     <>
@@ -70,10 +70,10 @@ const ProjectComp = () => {
       </Typography>
 
       <div className="projectsWrapper">
-        {projects.map((item) => (
+        {projects && projects.map((item) => (
           <ProjectCard
             id={item._id}
-            isAdmin={isAdmin}
+            // isAdmin={isAdmin}
             key={item._id}
             url={item.url}
             projectImage={item.image.url}
