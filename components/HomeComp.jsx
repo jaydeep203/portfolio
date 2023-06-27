@@ -122,7 +122,7 @@ const HomeComp = () => {
   
       <>
         <Typography variant="h3">Skills</Typography>
-        {/* <div className="homeCubeSkills">
+        <div className="homeCubeSkills">
           <div className="homeCubeSkillsFaces homeCubeSkillsFace1">
             <img src={imageUrl?imageUrl.image1.url:""} alt="Face1" />
           </div>
@@ -148,7 +148,7 @@ const HomeComp = () => {
           </div>
         </div>
 
-        <div className="cubeShadow"></div> */}
+        <div className="cubeShadow"></div>
         
         <div className="skillIcons">
           <SiCplusplus />
