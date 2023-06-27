@@ -25,6 +25,8 @@
         a:hover{
             color:$hover-color;
         }
+
+        
     }
     .smScreenHeader{
         display: none;
@@ -102,9 +104,11 @@ a{
         margin-left: 9rem;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         border: 2px solid white;
         background-color: white;
         border-radius: 1rem;
+        z-index: 50;
 
         
         a{

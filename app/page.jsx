@@ -36,7 +36,7 @@ const Page = () => {
         <TitleName/>
         <Link href={"/projects"}>VIEW WORK</Link>
       </div>
-      <div className="homeScrollBtn"><ScrollBtn /></div>
+      {/* <div className="homeScrollBtn"><ScrollBtn /></div> */}
 
       <div className="homeSelfInfoContainer">
         <Image src="/background.png" alt="background" height={500} width={500} />
