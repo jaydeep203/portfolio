@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from "next/link";
+import SmallScreenHeader from "../components/SmallScreenHeader";
 
 // const FetchData = async() => {
 //   try{
@@ -31,6 +32,7 @@ const Header = () => {
         <Link href={"/contact"} >CONTACT</Link>
         <Link href={"/admin-panel"}>ADMIN PANEL</Link>
       </article>
+      <SmallScreenHeader />
     </div>
   )
 }

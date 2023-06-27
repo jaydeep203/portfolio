@@ -26,6 +26,9 @@
             color:$hover-color;
         }
     }
+    .smScreenHeader{
+        display: none;
+    }
 
 }
 
@@ -61,4 +64,52 @@ a{
     }
 }
     
+}
+
+@media screen and (max-width: 400px){
+
+    .header{
+
+        article{
+            display: none;
+        }
+        .smScreenHeader{
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            width: 11rem;
+
+            button{
+                background: transparent;
+                border: none;
+                outline: none;
+
+                svg{
+                    color: white;
+                }
+            }
+            
+        }
+
+    }
+
+}
+
+.header{
+    .MenuContent{
+        position: absolute;
+        margin-top: 3rem;
+        margin-left: 9rem;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid white;
+        background-color: white;
+        border-radius: 1rem;
+
+        
+        a{
+            color: black;
+            margin-top: 1rem;
+        }
+    }
 }
