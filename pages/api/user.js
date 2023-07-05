@@ -11,7 +11,10 @@ const getUser = asyncError(async(req, res)=>{
         user = await User.findOne().select("-email -password -_id");
 
     if(!user) return errorHandler(res, 400, "Nothing to Show You.");
-
+    let visitors= user.visitors;
+    visitors++;
+    user.visitors= visitors;
+    await user.save();
     res.setHeader('Cache-Control', 'no-store');
 
     res.status(200).json({
