@@ -70,6 +70,7 @@ const schema = new mongoose.Schema({
           url: String,
         },
     },
+    visitors: Number,
       
 });
 
